@@ -27,22 +27,44 @@
   display: grid;
   margin: 0 auto;
   place-content: center;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
 
+}
+
+
+
+.profilePicDiv:hover+profilePicLabel {
+  display: block;
+  border: solid;
 }
 
 .cursorPointer:hover {
   cursor: pointer;
 }
 
-.profilePicDiv:hover {
 
+.profilePicDiv:hover {
   background-color: rgba(0, 0, 0, 0.168);
   transition: all .4s ease;
 }
 
-
-
 .hidden {
   display: none;
 
+}
+
+
+/* experimental */
+input {
+  background-color: transparent;
+  border: 0;
+  padding: 8px;
+  color: black;
+}
+
+input:hover {
+  background-color: #d3d3d346;
+  cursor: pointer;
 }
