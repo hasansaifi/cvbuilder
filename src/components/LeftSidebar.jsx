@@ -7,7 +7,7 @@ function LeftSidebar() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="section leftSidebar">
+    <div className="leftSidebar">
 
     </div>
   )
