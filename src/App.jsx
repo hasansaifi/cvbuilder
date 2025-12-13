@@ -1,5 +1,6 @@
 import Header from './components/Header.jsx'
 import MainContent from './components/MainContent.jsx'
+import './App.css'
 
 function App() {
     return (
@@ -10,7 +11,6 @@ function App() {
             <div >
                 <MainContent />
             </div>
-
         </div>
     )
 }

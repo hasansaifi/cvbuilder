@@ -1,10 +1,13 @@
+import Skills from "./Skills"
+
 function MainContent() {
     return <div className="mainContainer">
         <div>
-            <h1>Left Side</h1>
+            <h3>Skills</h3>
+            <Skills></Skills>
         </div>
         <div>
-            <h1>Right Side</h1>
+            <h3>Work Experience</h3>
         </div>
     </div>
 }
