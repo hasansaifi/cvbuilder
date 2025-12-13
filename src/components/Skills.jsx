@@ -1,14 +1,106 @@
 import { useState } from "react";
-import SingleLineEdit from "./SingleLineEdit"
+import SkillSlider from "./SkillSlider";
+import { TrashIcon, PlusIcon } from "@heroicons/react/24/outline"
 
 function Skills() {
-    const [skill, setSkill] = useState("Front End Development");
+    const [skills, setSkills] = useState([
+        { id: 1, name: "Front End Development", level: 900 },
+        { id: 2, name: "Back End Development ", level: 700 },
+        { id: 3, name: "Database Management", level: 700 },
+        { id: 4, name: "Technical SEO", level: 700 },
+    ]);
 
-    return <div>
-        <SingleLineEdit value={skill} setValue={setSkill}></SingleLineEdit>
+    // --- ACTIONS ---
 
-    </div>
+    // Add a new skill (creates a unique ID)
+    const addSkill = () => {
+        const newSkill = {
+            id: Date.now(),
+            name: "New Skill",
+            level: 500
+        };
+        setSkills([...skills, newSkill]);
+    };
 
+    // Delete a skill by ID
+    const deleteSkill = (id) => {
+        setSkills(skills.filter(skill => skill.id !== id));
+    };
+
+    // Update Name
+    const updateSkillName = (id, newName) => {
+        setSkills(skills.map(skill =>
+            skill.id === id ? { ...skill, name: newName } : skill
+        ));
+    };
+
+    // Update Level
+    const updateSkillLevel = (id, newLevel) => {
+        setSkills(skills.map(skill =>
+            skill.id === id ? { ...skill, level: newLevel } : skill
+        ));
+    };
+
+
+    return (
+        /* Class added here for the "Add Button" hover scope */
+        <div className="skills-section">
+            <div style={{
+                marginTop: '15px',
+                display: 'grid',
+                gridTemplateColumns: 'auto auto',
+                justifyContent: 'start',
+                alignContent: 'center'
+            }}>
+                <h3>Skills</h3>
+                {/* Class 'add-btn-container' added here */}
+                <div className="add-btn-container" style={{ marginTop: '21px', display: 'grid', justifyContent: 'center' }}>
+                    <button
+                        onClick={addSkill}
+                        style={{
+                            background: 'none', color: 'grey', border: 'none',
+                            borderRadius: '50%', width: '30px', height: '30px',
+                            cursor: 'pointer', fontSize: '20px'
+                        }}
+                    >
+                        <PlusIcon />
+                    </button>
+                </div>
+            </div>
+
+
+            {skills.map((skill) => (
+                /* Class 'skill-row' added here for the "Delete Button" hover scope */
+                <div key={skill.id} className="skill-row" style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+
+                    <div style={{ flexGrow: 1 }}>
+                        <SkillSlider
+                            name={skill.name}
+                            setName={(val) => updateSkillName(skill.id, val)}
+                            value={skill.level}
+                            setValue={(val) => updateSkillLevel(skill.id, val)}
+                        />
+                    </div>
+
+                    {/* Class 'delete-btn' added here */}
+                    <button
+                        onClick={() => deleteSkill(skill.id)}
+                        className="delete-btn"
+                        style={{
+                            border: 'none',
+                            background: 'none',
+                            width: '30px',
+                            cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center'
+                        }}
+                    >
+                        <TrashIcon />
+                    </button>
+                </div>
+            ))}
+
+
+        </div>
+    );
 }
 
-export default Skills
+export default Skills;

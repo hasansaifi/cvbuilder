@@ -32,3 +32,16 @@ body {
 p {
   margin: 0;
 }
+
+/* Only applies when printing or saving as PDF */
+@media print {
+
+  /* Hide the thumb/knob so it just looks like a bar */
+  .skill-range-input::-webkit-slider-thumb {
+    display: none;
+  }
+
+  /* You might need to use a linear-gradient background trick 
+     to show the progress color if the thumb is gone, 
+     but this is a quick fix. */
+}

@@ -2,12 +2,10 @@ import Skills from "./Skills"
 
 function MainContent() {
     return <div className="mainContainer">
-        <div>
-            <h3>Skills</h3>
+        <div className="leftSide">
             <Skills></Skills>
         </div>
-        <div>
-            <h3>Work Experience</h3>
+        <div className="rightSide">
         </div>
     </div>
 }
