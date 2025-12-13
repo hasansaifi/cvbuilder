@@ -19,13 +19,13 @@ function ProfilePic() {
 
     return (
         <div className="profilePicDiv cursorPointer" style={imagePreview && { backgroundImage: `url(${imagePreview})`, border: 'none' }} >
-            
-            <label htmlFor="profilePic" className={imagePreview ?  'hidden ' + 'cursorPointer profilePicLabel' : 'cursorPointer' }>
-                <ArrowUpTrayIcon width={35} />
-                {!imagePreview && <p>Upload image</p>}
+
+            <label htmlFor="profilePic" className={imagePreview ? 'hidden ' + 'cursorPointer profilePicLabel' : 'cursorPointer'}>
+                <ArrowUpTrayIcon width={20} />
+                {!imagePreview && <p style={{ fontSize: "10px" }}>Upload image</p>}
             </label>
 
-            <input className="hidden" id="profilePic" type="file" accept="image/png, image/jpeg" onChange={uploadImage}/>
+            <input className="hidden" id="profilePic" type="file" accept="image/png, image/jpeg" onChange={uploadImage} />
 
         </div>
     )

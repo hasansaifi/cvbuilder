@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 
-const MultiLineEdit = ({ value, setValue }) => {
+const MultiLineEdit = ({ value, setValue, className, style }) => {
     const [editingValue, setEditingValue] = useState(value);
 
     const onChange = (event) => setEditingValue(event.target.value);
@@ -42,6 +42,9 @@ const MultiLineEdit = ({ value, setValue }) => {
             onKeyDown={onKeyDown}
             onInput={(event) => onInput(event.target)}
             ref={textareaRef}
+            style={style}
+            className={`default-textarea-style ${className}`}
+
         />
     );
 };

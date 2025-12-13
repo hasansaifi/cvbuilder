@@ -5,14 +5,14 @@ import { useState } from "react";
 
 function Header() {
     const [name, setName] = useState("Hi, I'm Hasan,");
-    const [profession, setProfession] = useState("I am a Developer.");
-    const [intro, setIntro] = useState("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu lectus a elit mollis porttitor ultrices non eros. Etiam pharetra id odio sed gravida. Etiam faucibus tellus sit amet turpis ultrices, vel egestas felis maximus. Integer congue feugiat leo nec molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus facilisis in urna eget iaculis. Quisque venenatis, sem pretium aliquam finibus, risus ex efficitur lacus, mattis auctor sem elit ut nulla.");
+    const [profession, setProfession] = useState("I'm a Developer.");
+    const [intro, setIntro] = useState("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.");
 
     return <div className="header">
         <ProfilePic></ProfilePic>
-        <SingleLineEdit value={name} setValue={setName} />
-        <SingleLineEdit value={profession} setValue={setProfession} />
-        <MultiLineEdit value={intro} setValue={setIntro} />
+        <SingleLineEdit className="h1-center-bold" style={{ marginTop: "15px" }} value={name} setValue={setName} />
+        <SingleLineEdit className="h1-center-bold" style={{ marginTop: "-10px" }} value={profession} setValue={setProfession} />
+        <MultiLineEdit className="introText" value={intro} setValue={setIntro} />
     </div>
 
 }

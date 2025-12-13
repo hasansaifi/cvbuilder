@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SingleLineEdit({ value, setValue }) {
+function SingleLineEdit({ value, setValue, className, style }) {
   const [editingValue, setEditingValue] = useState(value);
 
   //When a user input text the value will be stored in setEditingValue
@@ -31,6 +31,8 @@ function SingleLineEdit({ value, setValue }) {
       onChange={onChange}
       onKeyDown={onKeyDown}
       onBlur={onBlur}
+      className={`default-input-style ${className}`}
+      style={style}
     />
   );
 }

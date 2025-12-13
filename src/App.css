@@ -1,12 +1,8 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .mainContainer {
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 1fr 1fr;
   gap: 5px;
+  margin-top: 50px;
 }
 
 
@@ -20,12 +16,12 @@
 }
 
 .profilePicDiv {
-  border: solid 2px;
+  border: solid 1.5px;
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   display: grid;
-  margin: 0 auto;
+  margin: 45px auto 0 auto;
   place-content: center;
   background-size: cover;
   background-position: top;
@@ -56,38 +52,53 @@
 }
 
 
-/* experimental */
-input {
+.default-input-style {
   background-color: transparent;
   border: 0;
-  padding: 8px;
   color: rgb(55, 55, 55);
-  text-align: center;
-  font-size: 50px;
-  font-weight: bold;
 }
 
-input:hover {
-  background-color: #d3d3d346;
+.h1-center-bold {
+  text-align: center;
+  font-size: 31px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.default-input-style:hover {
+  background-color: #d3d3d359;
   cursor: pointer;
 }
 
-textarea {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+.default-textarea-style {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
   resize: none;
   border: 0;
-  overflow: hidden;
+  overflow: clip;
   text-align: center;
-  min-height: 14px;
-  max-height: 100px;
   background-color: transparent;
-  color: rgb(55, 55, 55);
+  color: #9E9E9E;
 }
 
-textarea:focus {
+.default-textarea-style:hover {
+  background-color: #d3d3d359;
+  cursor: pointer;
+}
+
+.default-textarea-style:focus {
   outline: 5px auto Highlight;
   /* Firefox */
   outline: 5px auto -webkit-focus-ring-color;
   /* Chrome, Safari */
+}
+
+.introText {
+  font-size: 14.5px;
+  line-height: 1.2;
+  min-width: 380px;
+  padding: 1px;
+  margin: 10px auto 0 auto;
 }

@@ -1,6 +1,5 @@
-import LeftSidebar from './components/LeftSidebar.jsx'
-import MainContent from './components/MainContent.jsx'
 import Header from './components/Header.jsx'
+import MainContent from './components/MainContent.jsx'
 
 function App() {
     return (
@@ -8,8 +7,7 @@ function App() {
             <div>
                 <Header />
             </div>
-            <div className="mainContainer">
-                <LeftSidebar />
+            <div >
                 <MainContent />
             </div>
 
