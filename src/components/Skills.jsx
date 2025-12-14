@@ -1,13 +1,13 @@
 import { useState } from "react";
-import SkillSlider from "./SkillSlider";
+import Skill from "./Skill";
 import { TrashIcon, PlusIcon } from "@heroicons/react/24/outline"
 
 function Skills() {
     const [skills, setSkills] = useState([
-        { id: 1, name: "Front End Development", level: 900 },
-        { id: 2, name: "Back End Development ", level: 700 },
-        { id: 3, name: "Database Management", level: 700 },
-        { id: 4, name: "Technical SEO", level: 700 },
+        { id: 1, name: "Front End Development", level: 500 },
+        { id: 2, name: "Back End Development ", level: 500 },
+        { id: 3, name: "Database Management", level: 500 },
+        { id: 4, name: "Technical SEO", level: 500 },
     ]);
 
     // --- ACTIONS ---
@@ -74,11 +74,11 @@ function Skills() {
                 <div key={skill.id} className="skill-row" style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
 
                     <div style={{ flexGrow: 1 }}>
-                        <SkillSlider
+                        <Skill
                             name={skill.name}
                             setName={(val) => updateSkillName(skill.id, val)}
-                            value={skill.level}
-                            setValue={(val) => updateSkillLevel(skill.id, val)}
+                            level={skill.level}
+                            setLevel={(val) => updateSkillLevel(skill.id, val)}
                         />
                     </div>
 

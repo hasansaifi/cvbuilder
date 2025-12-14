@@ -18,6 +18,9 @@
   max-width: 794px;
   margin: 0 auto;
   border: 3px dotted rgba(0, 0, 0, 0.245);
+
+  --main-color: #5FDE5B;
+  --main-color-dark: #25a221;
 }
 
 body {

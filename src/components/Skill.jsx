@@ -1,15 +1,13 @@
 import { useState } from "react";
 import SingleLineEdit from "./SingleLineEdit";
 
-function SkillSlider({ name, setName, value, setValue }) {
-    const [skill, setSkill] = useState("Front End Development");
-
+function Skill({ name, setName, level, setLevel }) {
     const handleSliderChange = (e) => {
         setValue(e.target.value);
     };
 
     const sliderStyle = {
-        background: `linear-gradient(to right, #333 ${value / 10}%, #e0e0e0 ${value / 10}%)`
+        background: `linear-gradient(to right, var(--main-color) ${level / 10}%, #e0e0e0 ${level / 10}%)`
     };
 
     return (
@@ -23,7 +21,7 @@ function SkillSlider({ name, setName, value, setValue }) {
                 type="range"
                 min="0"
                 max="1000"
-                value={value}
+                value={level}
                 onChange={handleSliderChange}
                 className="skill-range-input"
                 style={sliderStyle}
@@ -32,4 +30,4 @@ function SkillSlider({ name, setName, value, setValue }) {
     );
 }
 
-export default SkillSlider;
+export default Skill;
