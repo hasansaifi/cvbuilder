@@ -69,7 +69,7 @@
 .default-textarea-style {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
-  font-weight: regular;
+  font-weight: 4 00;
   resize: none;
   border: 0;
   overflow: clip;
@@ -190,4 +190,48 @@
 /* 4. When you hover over the ENTIRE SECTION, show the add button */
 .skills-section:hover .add-btn-container {
   opacity: 1;
+}
+
+.jobPosition {
+  color: var(--main-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 13.8px;
+}
+
+.jobYear {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13.8px;
+  color: var(--secondary-color);
+  justify-items: end;
+}
+
+.positionDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.jobCompany {
+  color: var(--secondary-color);
+  font-size: 13.8px;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.jobDesc {
+  text-align: left;
+  font-size: 13.8px;
+}
+
+.workExpSingle {
+  display: grid;
+  border-bottom: 3px solid var(--secondary-color-light);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }

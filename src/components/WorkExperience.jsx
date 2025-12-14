@@ -6,11 +6,16 @@ function WorkExperience(
         years, setYears,
         companyName,
         setCompanyName,
-        jobDescriptoin, setJobDescription }) {
+        jobDescription, setJobDescription }) {
 
     return (
-        <div>
-            <SingleLineEdit className="skill" value={position} setValue={setPosition} />
+        <div className='workExpSingle'>
+            <div className='positionDiv'>
+                <SingleLineEdit className="jobPosition" value={position} setValue={setPosition} />
+                <SingleLineEdit className="jobYear" value={years} setValue={setYears} />
+                <SingleLineEdit className="jobCompany" value={companyName} setValue={setCompanyName} />
+            </div>
+            <MultiLineEdit className="jobDesc" value={jobDescription} setValue={setJobDescription} />
         </div>
     )
 }

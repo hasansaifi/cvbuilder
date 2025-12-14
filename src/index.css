@@ -21,6 +21,9 @@
 
   --main-color: #5FDE5B;
   --main-color-dark: #25a221;
+  --secondary-color: #9E9E9E;
+  --secondary-color-light: #E0E0E0;
+  ;
 }
 
 body {
