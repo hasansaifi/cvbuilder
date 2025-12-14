@@ -9,7 +9,6 @@ function WorkExperiences() {
         { id: 3, position: "Sr. Developer", years: "2000-2000", company: "Company Name", jobDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore." }
     ]);
 
-    const [title, setTitle] = useState({ title: "Work Experiences", addExp })
 
     function addExp() {
         const newExp = {
@@ -46,9 +45,14 @@ function WorkExperiences() {
         ))
     }
 
+    // Delete a skill by ID
+    const deleteExp = (id) => {
+        setWorkExperiences(workExperiences.filter(workExp => workExp.id !== id));
+    };
+
     return (
         <div>
-            <SectionTitle title={title.title} func={title.addExp} />
+            <SectionTitle title={"Work Experience"} func={addExp} />
             {workExperiences.map((workExp) => (
                 <div key={workExp.id} className="workexperience-row"  >
                     <div style={{ flexGrow: 1 }}>
@@ -61,6 +65,7 @@ function WorkExperiences() {
                             setCompanyName={(val) => updateWorkExCompany(workExp.id, val)}
                             jobDescription={workExp.jobDescription}
                             setJobDescription={(val) => updateWorkExJobDesc(workExp.id, val)}
+                            onDelete={() => deleteExp(workExp.id)}
                         />
 
                     </div>

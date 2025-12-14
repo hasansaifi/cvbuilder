@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
-  margin: 50px 0;
-  padding: 0 50px;
+  margin: 40px 0;
+  padding: 0 30px;
 }
 
 
@@ -165,6 +165,7 @@
 /* 1. By default, the delete button is invisible */
 .delete-btn {
   opacity: 0;
+  color: var(--secondary-color);
   transition: opacity 0.2s ease-in-out;
   /* Smooth fade */
   pointer-events: none;
@@ -176,6 +177,18 @@
   opacity: 1;
   pointer-events: auto;
   /* Re-enable clicking */
+}
+
+
+.workExpSingle:hover .delete-btn {
+  opacity: 1;
+  pointer-events: auto;
+  /* Re-enable clicking */
+}
+
+.singleEduDiv:hover .delete-btn {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 
@@ -192,7 +205,12 @@
   opacity: 1;
 }
 
-.jobPosition {
+.titleSection:hover .add-btn-container {
+  opacity: 1;
+}
+
+.jobPosition,
+.eduMajor {
   color: var(--main-color);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -200,19 +218,40 @@
   font-size: 13.8px;
 }
 
-.jobYear {
+.eduMajor {
+  width: 100%;
+}
+
+.jobYear,
+.eduYears,
+.eduUni {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 13.8px;
   color: var(--secondary-color);
+}
+
+
+
+.jobYear {
   justify-items: end;
+}
+
+.eduYears {
+  position: relative;
+  top: -6px;
+}
+
+.eduUni {
+  position: relative;
+  top: -12px;
 }
 
 .positionDiv {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .jobCompany {
@@ -234,4 +273,15 @@
   border-bottom: 3px solid var(--secondary-color-light);
   padding-bottom: 10px;
   margin-bottom: 10px;
+}
+
+.eduDiv {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.eduYearsDiv {
+  display: grid;
+  width: 60%;
+  grid-template-columns: 1fr 1fr;
 }

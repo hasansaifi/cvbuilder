@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Skill from "./Skill";
 import { TrashIcon, PlusIcon } from "@heroicons/react/24/outline"
+import SectionTitle from "./SectionTitle";
 
 function Skills() {
     const [skills, setSkills] = useState([
@@ -45,30 +46,7 @@ function Skills() {
     return (
         /* Class added here for the "Add Button" hover scope */
         <div className="skills-section">
-            <div style={{
-                marginTop: '15px',
-                display: 'grid',
-                gridTemplateColumns: 'auto auto',
-                justifyContent: 'start',
-                alignContent: 'center'
-            }}>
-                <h3>Skills</h3>
-                {/* Class 'add-btn-container' added here */}
-                <div className="add-btn-container" style={{ marginTop: '21px', display: 'grid', justifyContent: 'center' }}>
-                    <button
-                        onClick={addSkill}
-                        style={{
-                            background: 'none', color: 'grey', border: 'none',
-                            borderRadius: '50%', width: '30px', height: '30px',
-                            cursor: 'pointer', fontSize: '20px'
-                        }}
-                    >
-                        <PlusIcon />
-                    </button>
-                </div>
-            </div>
-
-
+            <SectionTitle title={"Skills"} func={addSkill} />
             {skills.map((skill) => (
                 /* Class 'skill-row' added here for the "Delete Button" hover scope */
                 <div key={skill.id} className="skill-row" style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
