@@ -1,0 +1,12 @@
+version: '3'
+services:
+  cvbuilder:
+    container_name: cvbuilder
+    build: .
+    restart: unless-stopped
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    external: true
