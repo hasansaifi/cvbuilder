@@ -3,7 +3,7 @@ import SingleLineEdit from "./SingleLineEdit";
 
 function Skill({ name, setName, level, setLevel }) {
     const handleSliderChange = (e) => {
-        setValue(e.target.value);
+        setLevel(e.target.value);
     };
 
     const sliderStyle = {
