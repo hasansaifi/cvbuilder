@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SingleLineEdit from "./SingleLineEdit";
 
 function Skill({ name, setName, level, setLevel }) {
