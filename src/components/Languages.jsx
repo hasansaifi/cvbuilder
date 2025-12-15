@@ -16,6 +16,8 @@ function Languages() {
             level: "Add level"
         }
 
+        setLanguages([...languages, newLang]);
+
     }
 
     function delLang(id) {
@@ -33,15 +35,19 @@ function Languages() {
     return (
         <div>
             <SectionTitle title={"Languages"} func={addLang} />
-            {languages.map((lang) =>
-                <Language
-                    language={lang.language}
-                    setLanguage={(val) => updateLang(lang.id, val)}
-                    level={lang.level}
-                    setLevel={(val) => updateLevel(lang.id, val)}
-                    onDelete={() => delLang(Education.id)}
-                />
-            )}
+            <div className="langDiv">
+                {languages.map((lang) =>
+                    <Language
+                        key={lang.id}
+                        language={lang.language}
+                        setLanguage={(val) => updateLang(lang.id, val)}
+                        level={lang.level}
+                        setLevel={(val) => updateLevel(lang.id, val)}
+                        onDelete={() => delLang(Education.id)}
+                    />
+                )}
+            </div>
+
         </div>
     )
 

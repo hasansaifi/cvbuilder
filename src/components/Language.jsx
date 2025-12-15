@@ -5,7 +5,7 @@ function Language({ language, setLanguage, level, setLevel, onDelete }) {
 
     return (
         <div>
-            <SingleLineEdit value={language} setValue={setLanguage} />
+            <SingleLineEdit className={'langName'} value={language} setValue={setLanguage} />
             <SingleLineEdit value={level} setValue={setLevel} />
         </div>
     )

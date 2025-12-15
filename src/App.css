@@ -1,8 +1,14 @@
+.parentDiv {
+  display: grid;
+  height: 100%;
+}
+
+
 .mainContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
-  margin: 40px 0;
+  margin: 0 0 10px 0;
   padding: 0 30px;
 }
 
@@ -18,7 +24,7 @@
   height: 135px;
   width: 135px;
   display: grid;
-  margin: 45px auto 0 auto;
+  margin: 20px auto 0 auto;
   place-content: center;
   background-size: cover;
   background-position: top;
@@ -69,7 +75,7 @@
 .default-textarea-style {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 4 00;
+  font-weight: 400;
   resize: none;
   border: 0;
   overflow: clip;
@@ -210,7 +216,8 @@
 }
 
 .jobPosition,
-.eduMajor {
+.eduMajor,
+.langName {
   color: var(--main-color);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -220,6 +227,11 @@
 
 .eduMajor {
   width: 100%;
+}
+
+.langDiv {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .jobYear,
@@ -266,13 +278,14 @@
 .jobDesc {
   text-align: left;
   font-size: 13.8px;
+  margin-top: 10px;
 }
 
 .workExpSingle {
   display: grid;
   border-bottom: 3px solid var(--secondary-color-light);
   padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .eduDiv {
@@ -284,4 +297,47 @@
   display: grid;
   width: 60%;
   grid-template-columns: 1fr 1fr;
+}
+
+/* Footer Style */
+.footerDiv {
+  display: grid;
+}
+
+.cv-footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Design Specs */
+  background-color: #3D3D3D;
+
+  padding: 10px 0;
+  /* "Just enough height" */
+  width: 100%;
+  height: 50px;
+
+  /* Vital for Printing: Forces the browser to print the background color */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+
+  /* Horizontal Layout */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-self: end;
+  gap: 15px;
+  /* Space between items */
+
+  margin-top: auto;
+  /* Pushes it to bottom if using flex-col layout */
+
+}
+
+.footerText {
+  display: grid;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: #9E9E9E;
+  font-size: 0.9rem;
+  text-align: center;
 }

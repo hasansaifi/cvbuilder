@@ -4,6 +4,8 @@ import Educations from "./Educations"
 import Languages from "./Languages"
 
 function MainContent() {
+
+
     return <div className="mainContainer">
         <div className="leftSide">
             <Skills />
