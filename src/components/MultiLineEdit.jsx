@@ -21,8 +21,9 @@ const MultiLineEdit = ({ value, setValue, className, style }) => {
 
     const onInput = useCallback((target) => {
         if (target.scrollHeight > 33) {
-            target.style.height = "5px";
-            target.style.height = (target.scrollHeight - 0) + "px";
+            console.log(target.scrollHeight);
+            // target.style.height = "5px";
+            target.style.height = (target.scrollHeight) + "px";
         }
     }, []);
 
@@ -34,6 +35,7 @@ const MultiLineEdit = ({ value, setValue, className, style }) => {
 
     return (
         <textarea
+
             rows={1}
             aria-label="Field name"
             value={editingValue}

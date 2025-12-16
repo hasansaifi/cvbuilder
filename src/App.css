@@ -76,12 +76,14 @@
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  resize: none;
   border: 0;
   overflow: clip;
   text-align: center;
   background-color: transparent;
   color: #9E9E9E;
+  overflow: clip;
+  min-height: 50px;
+  max-height: 100px;
 }
 
 .default-textarea-style:hover {

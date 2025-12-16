@@ -11,6 +11,7 @@ function Skill({ name, setName, level, setLevel }) {
 
     return (
         <div className="skill-slider-container">
+
             <div className="skill-label">
                 <SingleLineEdit className="skill" value={name} setValue={setName} />
 
